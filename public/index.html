@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA Problem Tracker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">Battle300</div>
+
+            <div class="auth-buttons">
+                <button id="login-btn"><i class="fab fa-google"></i> Sign in with Google</button>
+            </div>
+
+        </div>
+
+    </header>
+    <div id="top-bar">
+        <h2>DSA Problem Tracker</h2>
+        <span id="global-progress">Solved: 0 / 300</span>
+    </div>
+
+    <table id="problem-table">
+        <!-- your problems -->
+    </table>
+    <main class="container">
+        <div class="main-content">
+            <aside class="filters">
+                <h3>Filters</h3>
+                <div class="filter-group">
+                    <label for="topic-filter">Topics</label>
+                    <select id="topic-filter">
+                        <option value="all">All Topics</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="difficulty-filter">Difficulty</label>
+                    <select id="difficulty-filter">
+                        <option value="all">All Levels</option>
+                        <option value="Easy">Easy</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Hard">Hard</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="show-favorites">
+                        <label for="show-favorites">Favorites Only</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="show-completed">
+                        <label for="show-completed">Completed Only</label>
+                    </div>
+                </div>
+            </aside>
+
+            <section class="problems-container">
+                <div class="search-container">
+                    <input type="text" id="search-problems" class="search-input" placeholder="Search problems...">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+
+                <div id="problems-content">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+
+                <div class="empty-message" id="empty-message">
+                    No problems match your current filters.
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/tharun-kumar-7b3a14265/" target="_blank">
+                <img src="https://i.pinimg.com/564x/6b/ab/30/6bab3017350ca04c6fa05569672bd31e.jpg" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/gtharunkumargit" target="_blank">
+                <img src="https://images.icon-icons.com/3685/PNG/512/github_logo_icon_229278.png" alt="GitHub">
+            </a>
+        </div>
+        <div class="copyright">
+            <p>© 2024 GT. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
