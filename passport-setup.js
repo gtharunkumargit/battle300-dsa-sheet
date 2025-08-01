@@ -13,7 +13,7 @@ passport.deserializeUser((user, done) => {
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: '/auth/google/callback'
+    callbackURL: process.env.GOOGLE_CALLBACK_URL // ✅ Use full HTTPS URL from .env
 }, (accessToken, refreshToken, profile, done) => {
     return done(null, profile);
 }));
